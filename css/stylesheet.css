@@ -1,0 +1,371 @@
+/* GLOBAL
+======================== */
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none; 
+}
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HEADER 
+======================== */
+
+.bg {
+  width: 100%;
+  background: url('../img/bg@2x.png') no-repeat center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.bg-container {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  min-height: 700px;
+  padding-top: 140px;
+}
+
+.udacity-logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-size: 203px 60px;
+  width: 203px;
+  height: 60px;
+}
+
+.profile-pic {
+  background-size: 201px 201px;
+  width: 201px;
+  height: 201px;
+}
+
+h2 {
+  color: #fff;
+  font-size: 2em;
+  line-height: 50px;
+}
+
+.contact {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 1em 2.8em;
+  background-color: #448ccb;
+  color: #fff;
+  border: 1px solid #234b8b;
+  border-radius: 4px;
+  font-size: 1.1em;
+  text-decoration: none;
+  letter-spacing: 1.8px;
+}
+
+.contact:hover {
+  opacity: .9; 
+}
+
+/* QUICK FACTS 
+======================== */
+
+.facts {
+  max-width: 1200px;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.facts-container {
+  max-width: 700px;
+  padding: 5% 5%;
+}
+
+h3 {
+  color: #383838;
+  font-size: 1.7em;
+}
+
+.facts-container p {
+  color: #939393;
+  font-size: 1.1em;
+  line-height: 30px;
+}
+
+/* PORTFOLIO 
+======================== */
+
+.portfolio {
+  background-color: rgb(248,248,248);
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  width: 100%;
+  height: 100%;
+  padding: 5% 5%;
+}
+
+.portfolio h3 {
+  margin-top: -5px;
+}
+
+.port-flex {
+  display: flex;
+  display: -webkit-flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.link {
+  border: 1px solid rgb(230,230,230);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 0.8px 0 rgb(220,220,220);
+  height: 400px;
+  width: 400px;
+  margin: 10px 15px;
+  text-decoration: none;
+}
+
+.link:hover {
+  border: 1px solid rgb(210,210,210);
+}
+
+.port-flex img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: 1px solid rgb(230,230,230);
+}
+
+.content p {
+  color: #939393;
+  font-size: 1em;
+  line-height: 24px;
+  margin: 15px auto;
+  max-width: 300px;
+}
+
+.content h4 {
+  color: black;
+  font-size: 1em;
+  line-height: 26px;
+  margin: 50px auto 0;
+  text-transform: uppercase;
+  font-weight: 300px;
+  letter-spacing: 1.7px;
+  text-align: center;
+}
+
+/* MORE INFORMATION
+======================== */
+
+.more-info {
+  height: 100%;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.info-container {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  text-align: center;
+}
+
+/* FOOTER
+======================== */
+
+footer {
+  font-size: 0.8em;
+  color: rgb(140,140,140);
+}
+
+/* DRY
+======================== */
+
+h2, h3, p, .contact {
+  font-weight: 300;
+  text-align: center;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2, h3 {
+  margin: 20px auto 20px;
+}
+
+.facts, .facts-container {
+  margin: 0 auto;
+}
+
+/* MEDIA QUERIES
+======================== */
+
+@media screen and (max-width: 769px) {
+    .port-flex {
+  -webkit-flex-direction: column;
+  }
+
+  .link {
+    -webkit-flex-justify-content: center;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  .port-flex {
+  -webkit-flex-direction: column;
+  }
+
+  .link {
+    -webkit-flex-justify-content: center;
+    align-self: center;
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 568px) {
+
+/***
+iPhone 5 and basic responsiveness for other smartphone screens
+***/  
+
+  .bg-container {
+    padding-top: 22%;
+    height: 1100px;
+  }
+
+  .contact {
+    margin-top: 7%;
+    font-size: 2.8em;
+  }
+
+  h2 {
+    margin-top: 5%;
+    font-size: 3.5em;
+    line-height: 90px;
+  }
+
+  .facts-container {
+    padding-top: 12%;
+    padding-bottom: 12%;
+    max-width: 90%;
+}
+
+  .facts h3 {
+    font-size: 1.4em;
+    margin-bottom: 8%;
+  }
+
+  .facts p {
+    font-size: 0.85em;
+    line-height: 80px;
+  }
+
+  .portfolio {
+    padding-top: 12%;
+    padding-bottom: 12%;
+    overflow: auto;
+  }
+
+  .link {
+    margin-top: 6%;
+  }
+
+  .portfolio h3 {
+    font-size: 1.4em;
+  }
+
+  .port-flex {
+    -webkit-flex-direction: column;
+  }
+
+  .link {
+    -webkit-flex-justify-content: center;
+    align-self: center;
+    height: 1000px;
+    width: 95%;
+  }
+
+  .content p {
+    font-size: 2.6em;
+    max-width: 75%;
+    line-height: 60px;
+  }
+
+  .content h4 {
+    padding-top: 10%;
+    font-size: 3em;
+    line-height: 90px;
+  }
+
+  .more-info {
+    overflow: auto;
+  }
+
+  .info-container {
+    padding-top: 25%;
+    padding-bottom: 25%;
+  }
+
+  footer {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 0.7em;
+  }
+
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+
+/***
+iPhone 6
+***/ 
+
+  .facts h3 {
+    font-size: 3em;
+    margin-bottom: 8%;
+  }
+
+  .portfolio h3 {
+    font-size: 3em;
+  }
+
+  .facts p {
+    font-size: 0.95em;
+    line-height: 70px;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+
+}
+
+
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 3) {
+
+/***
+iPhone 6 Plus Portrait
+***/ 
+
+ .facts h3 {
+    font-size: 3em;
+    margin-bottom: 8%;
+  }
+
+  .portfolio h3 {
+    font-size: 3em;
+  }
+
+  .facts p {
+    font-size: 1em;
+    line-height: 70px;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+}
