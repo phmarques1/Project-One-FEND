@@ -12,6 +12,8 @@ body {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -134,8 +136,7 @@ h2 {
 .facts {
   max-width: 1200px;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 10%;
 }
 
 .facts-container {
@@ -326,8 +327,7 @@ iPhone 5 and basic responsiveness for other smartphone screens
   }
 
   .portfolio {
-    padding-top: 12%;
-    padding-bottom: 12%;
+    padding: 12% 0;
     overflow: auto;
   }
 
@@ -367,13 +367,11 @@ iPhone 5 and basic responsiveness for other smartphone screens
   }
 
   .info-container {
-    padding-top: 25%;
-    padding-bottom: 25%;
+    padding: 25% 0;
   }
 
   footer {
-    padding-top: 2%;
-    padding-bottom: 2%;
+    padding: 2% 0;
     font-size: 0.7em;
   }
 
