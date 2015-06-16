@@ -3,12 +3,14 @@
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-decoration: none; 
 }
 
 * {
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -16,11 +18,65 @@ img {
   max-width: 100%;
 }
 
+/* GRID LAYOUT
+======================== */
+
+.row {
+  width: 100%;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.33%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
 /* HEADER 
 ======================== */
 
 .bg {
-  width: 100%;
   background: url('../img/bg@2x.png') no-repeat center;
   background-size: cover;
   z-index: 0;
@@ -92,7 +148,7 @@ h3 {
   font-size: 1.7em;
 }
 
-.facts-container p {
+.intro {
   color: #939393;
   font-size: 1.1em;
   line-height: 30px;
@@ -110,7 +166,7 @@ h3 {
   padding: 5% 5%;
 }
 
-.portfolio h3 {
+.recent-work {
   margin-top: -5px;
 }
 
@@ -142,7 +198,7 @@ h3 {
   border-bottom: 1px solid rgb(230,230,230);
 }
 
-.content p {
+.proj-description {
   color: #939393;
   font-size: 1em;
   line-height: 24px;
@@ -150,13 +206,13 @@ h3 {
   max-width: 300px;
 }
 
-.content h4 {
+.proj-title {
   color: black;
   font-size: 1em;
   line-height: 26px;
   margin: 50px auto 0;
   text-transform: uppercase;
-  font-weight: 300px;
+  font-weight: 400;
   letter-spacing: 1.7px;
   text-align: center;
 }
@@ -170,8 +226,7 @@ h3 {
 }
 
 .info-container {
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding: 10% 0;
   text-align: center;
 }
 
@@ -186,18 +241,21 @@ footer {
 /* DRY
 ======================== */
 
-h2, h3, p, .contact {
+h2, 
+h3, 
+p, 
+.contact {
   font-weight: 300;
   text-align: center;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
 }
 
-h2, h3 {
+h2, 
+h3 {
   margin: 20px auto 20px;
 }
 
-.facts, .facts-container {
+.facts, 
+.facts-container {
   margin: 0 auto;
 }
 
@@ -205,12 +263,14 @@ h2, h3 {
 ======================== */
 
 @media screen and (max-width: 769px) {
-    .port-flex {
+  .port-flex {
   -webkit-flex-direction: column;
+  flex-direction: column;
   }
 
   .link {
     -webkit-flex-justify-content: center;
+    flex-justify-content: center;
     align-self: center;
   }
 }
@@ -218,10 +278,12 @@ h2, h3 {
 @media screen and (max-width: 768px) and (min-width: 481px) {
   .port-flex {
   -webkit-flex-direction: column;
+  flex-direction: column;
   }
 
   .link {
     -webkit-flex-justify-content: center;
+    flex-justify-content: center;
     align-self: center;
   }
 }
@@ -249,17 +311,16 @@ iPhone 5 and basic responsiveness for other smartphone screens
   }
 
   .facts-container {
-    padding-top: 12%;
-    padding-bottom: 12%;
+    padding: 12% 0;
     max-width: 90%;
 }
 
-  .facts h3 {
+  .quick-facts {
     font-size: 1.4em;
     margin-bottom: 8%;
   }
 
-  .facts p {
+  .intro {
     font-size: 0.85em;
     line-height: 80px;
   }
@@ -274,7 +335,7 @@ iPhone 5 and basic responsiveness for other smartphone screens
     margin-top: 6%;
   }
 
-  .portfolio h3 {
+  .recent-work {
     font-size: 1.4em;
   }
 
@@ -289,13 +350,13 @@ iPhone 5 and basic responsiveness for other smartphone screens
     width: 95%;
   }
 
-  .content p {
+  .proj-description {
     font-size: 2.6em;
     max-width: 75%;
     line-height: 60px;
   }
 
-  .content h4 {
+  .proj-title {
     padding-top: 10%;
     font-size: 3em;
     line-height: 90px;
@@ -324,7 +385,7 @@ iPhone 5 and basic responsiveness for other smartphone screens
 iPhone 6
 ***/ 
 
-  .facts h3 {
+  .quick-facts {
     font-size: 3em;
     margin-bottom: 8%;
   }
@@ -333,7 +394,7 @@ iPhone 6
     font-size: 3em;
   }
 
-  .facts p {
+  .intro {
     font-size: 0.95em;
     line-height: 70px;
   }
@@ -351,16 +412,16 @@ iPhone 6
 iPhone 6 Plus Portrait
 ***/ 
 
- .facts h3 {
+ .intro {
     font-size: 3em;
     margin-bottom: 8%;
   }
 
-  .portfolio h3 {
+  .recent-work {
     font-size: 3em;
   }
 
-  .facts p {
+  .intro {
     font-size: 1em;
     line-height: 70px;
   }
